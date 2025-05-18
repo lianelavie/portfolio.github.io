@@ -72,6 +72,8 @@
             <img src="quizform.jpeg" alt="quiz form">
             <a href="https://github.com/lianelavie/Accessibility-by-Building-a-Quiz" target="_blank">Quiz Form</a>
           </div>
+
+          
         </div>
       </section>
       
@@ -109,6 +111,7 @@
         <p>5. Intro to AI by <a href="https://www.netacad.com/">NetCad</a></p>
         <a href="https://www.netacad.com/certificates?issuanceId=4e0223c4-6685-4582-9692-7182b2d68a67" target="_blank">View here</a>
       </div>
+      
     </div>
   </details>
 </section>
@@ -117,18 +120,7 @@
 
 <br>
 <br>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you would like to get in touch, feel free to reach out via <a href="#email">email</a>.</p>
-    </section>
-
-
-
-
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 <script>
   VANTA.WAVES({
@@ -144,10 +136,12 @@
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({
-    duration: 1000, // animation duration
-    once: true // only animate once on scroll
+    duration: 1000, 
+    easing: 'ease-in-out',
+    
   });
-</script>
 
+</script>
+<?php include 'footer.php'; ?>
 </body>
 </html>
