@@ -5,38 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="stylefor1.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;600;700&display=swap" rel="stylesheet">
     <title>My Portfolio</title>
+    
 </head>
-<script>
-    const text = "Welcome to my portfolio!";
-    let index = 0;
-    const typingText = document.querySelector(".typing-text");
-
-    function type() {
-        if (index < text.length) {
-            typingText.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(type, 100);
-        }
-    }
-
-    typingText.innerHTML = '';
-    type();
-</script>
-
 <body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+    <button onclick="topFunction()" id="backToTop" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <nav id="navbar">
         <div id="menu">
             <a href="#about">About</a>
-            <a href="#projects">Projects</a>
+            <a href="#projects">Work</a>
+            <a href="#certifications">Certifications</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
-    <section id="about" >
+    <section id="about">
+       <div class="parallax-inner">
+                <img src="id.jpg"/>
+                
         <h1 class="typing-text">Welcome to my portfolio!</h1>
         <h2>Hello! I'm Lata.</h2>
         <p>I'm an aspiring software developer with a keen interest in web development and machine learning.</p>
@@ -45,102 +39,125 @@
         <p>In my free time, I enjoy exploring new technologies and working on personal projects.</p>
         <p>Feel free to <a href="#contact">connect</a> with me!</p>
     </section>
-    <br>
-    <br>
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>The projects mentioned below are some of my work and they all have informationabout the project and the link to the project</p>
-      
-        <div id="project-grid">
-          <div class="project-tile" data-aos="fade-up">
-            <img src="guessingnumber.jpeg" alt="Guess the Number Game">
-            <a href="https://github.com/lianelavie/Guess-The-Number-Game" target="_blank">Guessing Game</a>
-            <p></p>
-          </div>
-      
-          <div class="project-tile" data-aos="fade-up">
-            <img src="creditcard.jpeg" alt="Credit Card Fraud Detection">
-            <a href="https://github.com/lianelavie/Credit-Card-Fraud-Detection" target="_blank">Credit Card Fraud Detection</a>
-          </div>
-      
-          <div class="project-tile" data-aos="fade-up">
-            <img src="studentmanagement.jpeg" alt="student Management system">
-            <a href="https://github.com/lianelavie/Student-Management" target="_blank">Student Management</a>
-          </div>
-      
-          <div class="project-tile" data-aos="fade-up">
-            <img src="quizform.jpeg" alt="quiz form">
-            <a href="https://github.com/lianelavie/Accessibility-by-Building-a-Quiz" target="_blank">Quiz Form</a>
-          </div>
-
-          
+   <section id="projects">
+    <h2>Projects</h2>
+    <p>The projects mentioned below are some of my work and they all have information about the project and the link to the project</p>
+    <div id="project-grid">
+        <div class="flip-card" tabindex="0" data-aos="fade-up">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="guessingnumber.jpeg" alt="Guess the Number Game">
+                    <a href="https://github.com/lianelavie/Guess-The-Number-Game" target="_blank">Guessing Game</a>
+                </div>
+                <div class="flip-card-back">
+                    <p><strong>Technologies:</strong> C/C++</p>
+                    <p>Developed a console-based game in C++ where users guess a randomly generated number within a specified range.The game features three difficulty levels & varying chances to guess.</p>
+                </div>
+            </div>
         </div>
-      </section>
-      
-    <br>
-    <br>
-
-<section id="certifications">
-  <h2>Certifications & Achievements</h2>
-  <p>Here are some of my achievements and certifications I have earned over the last two years:</p>
-
-  <details>
-    <summary style="cursor: pointer; font-weight: bold;">Click to view certifications</summary>
-    <div class="cert-list" style="margin-top: 10px;">
-      <div class="web-design">
-        <p>1. Responsive-web-design by <a href="https://www.freecodecamp.org/">freecodecamp.org</a></p>
-        <a href="https://www.freecodecamp.org/certification/lianalavie/responsive-web-design" target="_blank">View here</a>
-      </div>
-
-      <div class="ml">
-        <p>2. Machine Learning Foundations by <a href="https://www.skillindiadigital.gov.in/home">NISC</a></p>
-        <a href="https://www.freecodecamp.org/certification/lianalavie/responsive-web-design" target="_blank">View here</a>
-      </div>
-
-      <div class="talent">
-        <p>3. Unstop Talent Park by <a href="https://unstop.com/">Unstop</a></p>
-        <a href="https://unstop.com/certificate-preview/b0035c44-bc1e-494c-80d7-1b096141acd4" target="_blank">View here</a>
-      </div>
-
-      <div class="flipkart">
-        <p>4. Flipkart Runway by <a href="https://unstop.com/">Unstop</a></p>
-        <a href="https://unstop.com/certificate-preview/6958b055-8c01-4fb2-ae6c-79f2db01adf7" target="_blank">View here</a>
-      </div>
-
-      <div class="ai">
-        <p>5. Intro to AI by <a href="https://www.netacad.com/">NetCad</a></p>
-        <a href="https://www.netacad.com/certificates?issuanceId=4e0223c4-6685-4582-9692-7182b2d68a67" target="_blank">View here</a>
-      </div>
-      
+        <div class="flip-card" tabindex="0" data-aos="fade-up">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="creditcard.jpeg" alt="Credit Card Fraud Detection">
+                    <a href="https://github.com/lianelavie/Credit-Card-Fraud-Detection" target="_blank">Credit Card Fraud Detection</a>
+                </div>
+                <div class="flip-card-back">
+                    <p><strong>Technologies:</strong> Python, Machine Learning</p>
+                    <p>This model identifies valid and invalid credit card transactions using supervised learning techniques.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card" tabindex="0" data-aos="fade-up">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="studentmanagement.jpeg" alt="Student Management System">
+                    <a href="https://github.com/lianelavie/Student-Management" target="_blank">Student Management</a>
+                </div>
+                <div class="flip-card-back">
+                    <p><strong>Technologies:</strong> Java, Swing, AWT, SQL</p>
+                    <p>It features a GUI which requires user authentication.Once logged in, users can access MySQL to add & modify records.</p>
+                </div>
+            </div>
+        </div>
+         <div class="flip-card" tabindex="0" data-aos="fade-up">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="quizform.jpeg" alt="quiz form">
+                    <a href="https://github.com/lianelavie/Accessibility-by-Building-a-Quiz.git" target="_blank">Quiz Form</a>
+                </div>
+                <div class="flip-card-back">
+                    <p><strong>Technologies:</strong> HTML,CSS</p>
+<p>The HTML code is organized into logical sections, with ARIA attributes and semantic elements to improve accessibility.The CSS uses media query to disable smooth scrolling for users.</p>
+                  </div>
+            </div>
+        </div>
+        <div class="flip-card" tabindex="0" data-aos="fade-up">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="online compiler.jpeg" alt="Online Compiler">
+                    <a href="https://github.com/lianelavie/Online-compiler.git" target="_blank">Online Compiler</a>
+                </div>
+                <div class="flip-card-back">
+                    <p><strong>Technologies:</strong> JQuery, Semantic UI, Judge0</p>
+                    <p>Key drivers include enhancing the coder experience with a real-time compiler, integrating multiple language options and exploring code optimization.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card" tabindex="0" data-aos="fade-up">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="smartcarui.jpg" alt="Smartcar Dashboard UI">
+                    <a href="https://github.com/lianelavie/smart-car-dashboard.git" target="_blank">Smartcar Dashboard UI</a>
+                </div>
+                <div class="flip-card-back">
+                    <p><strong>Technologies:</strong> JQuery, Semantic UI, Judge0</p>
+                    <p>It enhances the driver experience with real-time data,integrating multimedia and navigation features.</p>
+                  </div>
+            </div>
+        </div>
     </div>
-  </details>
 </section>
-
-
-
-<br>
-<br>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-<script>
-  VANTA.WAVES({
-    el: "#navbar",
-  color: 0xff9900,
-  shininess: 70,
-  waveHeight: 25,
-  waveSpeed: 0.5,
-  zoom: 1
-  })
-</script>
-<!-- AOS Script -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000, 
-    easing: 'ease-in-out',
-    
-  });
-
-</script>
+    <section id="certifications">
+        <h2>Certifications & Achievements</h2>
+        <p>Here are some of my achievements and certifications I have earned over the last two years:</p>
+        <details>
+            <summary style="cursor: pointer; font-weight: bold;">Click to view certifications</summary>
+            <div class="cert-list" style="margin-top: 10px;">
+                <div class="web-design">
+                    <p>1. Responsive-web-design by <a href="https://www.freecodecamp.org/">freecodecamp.org</a></p>
+                    <a href="https://www.freecodecamp.org/certification/lianalavie/responsive-web-design" target="_blank">View here</a>
+                </div>
+                <div class="ml">
+                    <p>2. Machine Learning Foundations by <a href="https://www.skillindiadigital.gov.in/home">NISC</a></p>
+                    <a href="https://www.freecodecamp.org/certification/lianalavie/responsive-web-design" target="_blank">View here</a>
+                </div>
+                <div class="talent">
+                    <p>3. Unstop Talent Park by <a href="https://unstop.com/">Unstop</a></p>
+                    <a href="https://unstop.com/certificate-preview/b0035c44-bc1e-494c-80d7-1b096141acd4" target="_blank">View here</a>
+                </div>
+                <div class="flipkart">
+                    <p>4. Flipkart Runway by <a href="https://unstop.com/">Unstop</a></p>
+                    <a href="https://unstop.com/certificate-preview/6958b055-8c01-4fb2-ae6c-79f2db01adf7" target="_blank">View here</a>
+                </div>
+                <div class="ai">
+                    <p>5. Intro to AI by <a href="https://www.netacad.com/">NetCad</a></p>
+                    <a href="https://www.netacad.com/certificates?issuanceId=4e0223c4-6685-4582-9692-7182b2d68a67" target="_blank">View here</a>
+                </div>
+            </div>
+        </details>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you would like to get in touch, feel free to reach out via email or connect with me on LinkedIn.</p>
+        <a href="mailto:mlata6776@gmail.com?Subject=Hello" target="_blank">
+            <i class="fa fa-envelope"></i>&nbsp;
+            <h3>mlata6776@gmail.com</h3>
+        </a>
+        <a href="https://www.linkedin.com/in/lata-34a938259" target="_blank">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp;
+            <h3>LinkedIn</h3>
+        </a>
+    </section>
+   <script src="script.js"></script>
 </body>
 </html>
