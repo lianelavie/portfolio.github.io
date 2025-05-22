@@ -13,13 +13,42 @@
     
 </head>
 <body>
-    <div id="loader">
-        <div class="spinner"></div>
-    </div>
-    <button onclick="topFunction()" id="backToTop" title="Go to top">
-        <i class="fas fa-arrow-up"></i>
+<button id="hamburger" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
     </button>
-    <nav id="navbar">
+    <aside id="sidebar">
+        <button id="closeSidebar" aria-label="Close menu"><i class="fas fa-times"></i></button>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Work</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="sidebar-certifications">
+            <h3>Certifications</h3>
+            <ul>
+                <li>
+                    Responsive-web-design by <a href="https://www.freecodecamp.org/certification/lianalavie/responsive-web-design" target="_blank">freecodecamp.org</a>
+                </li>
+                <li>
+                    Machine Learning Foundations by <a href="https://www.skillindiadigital.gov.in/home" target="_blank">NISC</a>
+                </li>
+                <li>
+                    Unstop Talent Park by <a href="https://unstop.com/certificate-preview/b0035c44-bc1e-494c-80d7-1b096141acd4" target="_blank">Unstop</a>
+                </li>
+                <li>
+                    Flipkart Runway by <a href="https://unstop.com/certificate-preview/6958b055-8c01-4fb2-ae6c-79f2db01adf7" target="_blank">Unstop</a>
+                </li>
+                <li>
+                    Intro to AI by <a href="https://www.netacad.com/certificates?issuanceId=4e0223c4-6685-4582-9692-7182b2d68a67" target="_blank">NetCad</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+     <div id="overlay"></div>
+
+        <nav id="navbar">
         <div id="menu">
             <a href="#about">About</a>
             <a href="#projects">Work</a>
@@ -27,7 +56,7 @@
             <a href="#contact">Contact</a>
         </div>
     </nav>
-    <section id="about">
+    <section id="about" class="alt-section" data-aos="fade-right">
        <div class="parallax-inner">
                 <img src="id.jpg"/>
                 
@@ -39,7 +68,25 @@
         <p>In my free time, I enjoy exploring new technologies and working on personal projects.</p>
         <p>Feel free to <a href="#contact">connect</a> with me!</p>
     </section>
-   <section id="projects">
+     <section id="education" data-aos="fade-left">
+        <h2>Education</h2>
+        <div class="education-list">
+            <div class="education-item">
+                <h3>Graphic Era Hill University, Dehradun</h3>
+                <p>B.Tech in Computer Science & Engineering</p>
+                <p>Expected Graduation: 2026</p>
+            </div>
+            <div class="education-item">
+                <h3>Kendriya Vidyalaya AFS, Rajokri</h3>
+                <p>Senior Secondary Education (PCM with CS)</p>
+                <p>Class of 2022</p>
+            </div>
+            <!-- Add more education items as needed -->
+        </div>
+    </section>
+
+
+   <section id="projects" class="alt-section" data-aos="fade-right">
     <h2>Projects</h2>
     <p>The projects mentioned below are some of my work and they all have information about the project and the link to the project</p>
     <div id="project-grid">
@@ -116,8 +163,7 @@
             </div>
         </div>
     </div>
-</section>
-    <section id="certifications">
+     <section id="certifications" data-aos="fade-left">
         <h2>Certifications & Achievements</h2>
         <p>Here are some of my achievements and certifications I have earned over the last two years:</p>
         <details>
@@ -146,7 +192,8 @@
             </div>
         </details>
     </section>
-    <section id="contact">
+
+    <section id="contact" class="alt-section" data-aos="fade-right">
         <h2>Contact Me</h2>
         <p>If you would like to get in touch, feel free to reach out via email or connect with me on LinkedIn.</p>
         <a href="mailto:mlata6776@gmail.com?Subject=Hello" target="_blank">
@@ -158,6 +205,10 @@
             <h3>LinkedIn</h3>
         </a>
     </section>
-   <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 600, once: true });
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
