@@ -42,6 +42,16 @@ window.onscroll = function() {
 window.topFunction = function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+// ...existing code...
+
+// Flip card on click
+document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', function () {
+        this.classList.toggle('flipped');
+    });
+});
+
+// ...existing code...
 
 // Initialize AOS (Animate On Scroll)
 if (typeof AOS !== 'undefined') {

@@ -2,13 +2,14 @@
 body {
     font-family: 'Barlow', sans-serif;
     margin: 0;
-    background: linear-gradient(to bottom, #3f2b96, #a8c0ff);
+    padding: 0;
+    background: #f0f4ff;
     color: #222;
 }
 
 section {
     padding: 60px 20px;
-    transition: background 0.3s;
+    transition: background 0.3s; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 
@@ -101,34 +102,6 @@ section {
 #sidebar nav a:hover {
     color: #4e9af1;
 }
-
-.sidebar-certifications {
-    border-top: 1px solid #444;
-    padding-top: 18px;
-}
-
-.sidebar-certifications h3 {
-    margin-top: 0;
-    font-size: 1.1rem;
-    color: #4e9af1;
-}
-
-.sidebar-certifications ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar-certifications li {
-    margin-bottom: 10px;
-    font-size: 0.98rem;
-}
-
-.sidebar-certifications a {
-    color: #fff;
-    text-decoration: underline;
-}
-
 #overlay {
     display: none;
     position: fixed;
@@ -153,11 +126,15 @@ section {
 
 /* Section Alternating Backgrounds */
 section:nth-of-type(even) {
-    background: #e9f0fa;
+     background: linear-gradient(135deg, #b993d6 0%, #8ca6db 100%);
+    /* Slightly lighter and more diagonal for a modern look */
+    /* Optional: add a little transparency for a softer effect */
+    background: linear-gradient(135deg, rgba(185,147,214,0.15) 0%, rgba(140,166,219,0.15) 100%);
 }
 section:nth-of-type(odd) {
     background: #fff;
-}
+
+   }
 
 /* About Section */
 #about .parallax-inner {
@@ -165,6 +142,7 @@ section:nth-of-type(odd) {
     flex-direction: column;
     align-items: center;
     gap: 18px;
+    
 }
 
 #about img {
@@ -220,11 +198,10 @@ section:nth-of-type(odd) {
     transform-style: preserve-3d;
 }
 
-.flip-card:focus .flip-card-inner,
-.flip-card:hover .flip-card-inner {
+
+.flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
 }
-
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
